@@ -6,3 +6,7 @@ exclude =
     __pycache__,
     manage.py,
     settings.py
+ignore =
+    E203,
+    W291,
+    W292,
