@@ -12,7 +12,6 @@ from rest_framework.test import APIClient
 
 from core.models import (
     Recipe,
-    Tag,
 )
 from recipe.serializers import (
     RecipeSerializer,
