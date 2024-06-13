@@ -7,7 +7,7 @@ from django.contrib.auth import get_user_model
 from django.urls import reverse
 
 from recipe.serializers import TagSerializer
-from core.models import Tag, Recipe
+from core.models import Tag
 
 from rest_framework.test import APIClient
 from rest_framework import status

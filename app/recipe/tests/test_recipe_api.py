@@ -188,6 +188,7 @@ class PrivateRecipeAPITests(TestCase):
         res = self.client.patch(url, payload)
         recipe.refresh_from_db()
 
+        self.assertEqual(res.status_code, status.HTTP_200_OK)
         self.assertEqual(recipe.user, self.user)
 
     def test_delete_recipe(self):
@@ -222,7 +223,7 @@ class PrivateRecipeAPITests(TestCase):
 
     def test_create_recipe_with_existing_tags(self):
         """Test creating a recipe with existing tags."""
-        tag_indian = Tag.objects.create(user=self.user, name="Indian")
+        # tag_indian = Tag.objects.create(user=self.user, name="Indian")
         payload = {
             "title": "Test Title",
             "time_minutes": 30,
